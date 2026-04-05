@@ -117,7 +117,7 @@
 
      
 
-<div id="mobile-menu" class="hidden md:hidden flex flex-col bg-white px-6 py-4 space-y-4 shadow-lg z-50">
+<div id="mobile-menu" class="hidden md:hidden flex flex-col bg-white px-6 py-4 space-y-4 shadow-lg z-50 fixed top-16 left-0 w-full">
   <a href="index.html">Home</a>
   <a href="products.html">Products</a>
   <a href="about.html">About</a>
@@ -310,13 +310,19 @@
 </div>
 </button>
 
-      <script>
+     <script>
   const btn = document.getElementById('menu-btn');
   const menu = document.getElementById('mobile-menu');
 
   if (btn && menu) {
     btn.addEventListener('click', () => {
       menu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+      });
     });
   }
 </script>
