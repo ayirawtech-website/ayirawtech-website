@@ -105,7 +105,7 @@
 <a class="font-label text-xs font-semibold uppercase tracking-widest text-slate-600 hover:text-teal-600 transition-colors" href="leadership.html">Team</a>
 </nav>
 <div class="flex items-center gap-4">
-<button class="md:hidden p-2 text-slate-600 active:scale-95 transition-all">
+<button id="menu-btn" class="md:hidden p-2 text-slate-600 active:scale-95 transition-all">
 <span class="material-symbols-outlined" data-icon="menu">menu</span>
 </button>
 <button class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-md font-label text-xs font-bold uppercase tracking-widest hover:opacity-90 transition-all">
@@ -114,6 +114,16 @@
 </div>
 </div>
 </header>
+
+      
+
+<div id="mobile-menu" class="hidden md:hidden flex flex-col bg-white px-6 py-4 space-y-4 shadow-lg z-50 fixed top-16 left-0 w-full">
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="about.html">About</a>
+  <a href="leadership.html">Team</a>
+</div>
+      
 <main class="pt-16">
 <!-- Hero Section: The Architectural Epicure -->
 <section class="relative min-h-[795px] flex items-center overflow-hidden">
@@ -300,4 +310,16 @@
 <span class="max-w-0 group-hover:max-w-xs transition-all duration-300 font-label text-xs font-bold uppercase whitespace-nowrap overflow-hidden">Pre-Order Puttu Maker</span>
 </div>
 </button>
+
+      <script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  if (btn && menu) {
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  }
+</script>
+      
 </body></html>
