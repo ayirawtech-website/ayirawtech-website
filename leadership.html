@@ -106,11 +106,18 @@
 <a class="px-4 text-slate-600 hover:text-teal-600 transition-colors font-label text-sm font-semibold uppercase tracking-widest" href="about.html">About</a>
 <a class="px-4 text-[#002620] font-bold font-label text-sm uppercase tracking-widest" href="leadership.html">Team</a>
 </div>
-<button class="md:hidden">
+<button id="menu-btn" class="md:hidden">
 <span class="material-symbols-outlined text-[#1A365D]" data-icon="menu">menu</span>
 </button>
 </div>
 </nav>
+<div id="mobile-menu" class="hidden md:hidden flex flex-col bg-white px-6 py-4 space-y-4 shadow-lg z-50 fixed top-16 left-0 w-full">
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="about.html">About</a>
+  <a href="leadership.html">Team</a>
+</div>
+      
 <main class="pt-24 pb-32">
 <!-- Hero Section: Leadership Profile -->
 <section class="max-w-7xl mx-auto px-6 mb-20">
@@ -309,4 +316,20 @@
 <span class="font-label text-[10px] font-semibold uppercase tracking-widest mt-1">Team</span>
 </div>
 </nav>
+      <script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  if (btn && menu) {
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+      });
+    });
+  }
+</script>
 </body></html>
