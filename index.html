@@ -93,19 +93,26 @@
 <body class="bg-background text-on-surface font-body selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
 <!-- TopAppBar -->
 <header class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-md dark:bg-slate-950/70">
-<div class="flex items-center gap-3">
-  <img src="public/images/ayiraw tech.png" alt="Logo" class="h-8 w-auto">
-  <span class="text-xl font-headline font-bold text-[#1A365D] tracking-tighter uppercase">
-    AYIRAW TECH
-  </span>
-</div>
-<nav class="hidden md:flex items-center space-gap-8 gap-x-8">
-<a class="font-label text-xs font-bold uppercase tracking-widest text-[#002620] hover:text-teal-600 transition-colors" href="index.html">Home</a>
-<a class="font-label text-xs font-semibold uppercase tracking-widest text-slate-600 hover:text-teal-600 transition-colors" href="products.html">Products</a>
-<a class="font-label text-xs font-semibold uppercase tracking-widest text-slate-600 hover:text-teal-600 transition-colors" href="about.html">About</a>
-<a class="font-label text-xs font-semibold uppercase tracking-widest text-slate-600 hover:text-teal-600 transition-colors" href="leadership.html">Team</a>
-</nav>
-<div class="flex items-center gap-4">
+  <div class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+
+    <!-- LEFT -->
+    <div class="flex items-center gap-3">
+      <img src="public/images/ayiraw-logo.png" alt="Logo" class="h-8 w-auto">
+      <span class="text-xl font-headline font-bold text-[#1A365D] tracking-tighter uppercase">
+        AYIRAW TECH
+      </span>
+    </div>
+
+    <!-- CENTER -->
+    <nav class="hidden md:flex items-center gap-x-8">
+      <a class="font-label text-xs font-bold uppercase tracking-widest text-[#002620]" href="index.html">Home</a>
+      <a class="font-label text-xs font-semibold uppercase tracking-widest text-slate-600" href="products.html">Products</a>
+      <a class="font-label text-xs font-semibold uppercase tracking-widest text-slate-600" href="about.html">About</a>
+      <a class="font-label text-xs font-semibold uppercase tracking-widest text-slate-600" href="leadership.html">Team</a>
+    </nav>
+
+    <!-- RIGHT -->
+    <div class="flex items-center gap-4">
       <button id="menu-btn" class="md:hidden p-2 text-slate-600">
         <span class="material-symbols-outlined">menu</span>
       </button>
@@ -117,7 +124,6 @@
 
   </div>
 </header>
-
      
 
 <div id="mobile-menu" class="hidden md:hidden flex flex-col bg-white px-6 py-4 space-y-4 shadow-lg z-50 fixed top-16 left-0 w-full">
